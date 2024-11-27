@@ -10,6 +10,8 @@ public class DozerMapper { //dozer é responsavel por converter entidades em VO
 	
 	private static Mapper mapper = DozerBeanMapperBuilder.buildDefault();
 	
+	//private static ModelMapper mapper = new ModelMapper;
+	
 	public static <O,D> D parseObject(O origin, Class<D> destination) { //converter obj simples
 		return mapper.map(origin, destination);
 	}
